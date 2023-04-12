@@ -12,12 +12,22 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * This service class initializes Firebase Cloud Messaging (FCM) by loading the Firebase configuration file and setting
+ * up the FirebaseOptions object.
+ */
 @Log4j2
 @Service
 public class FCMInitializer {
+
+    /** The path to the Firebase configuration file. */
     @Value("${app.firebase-configuration-file}")
     private String firebaseConfigPath;
 
+    /**
+     * Initializes Firebase Cloud Messaging by loading the Firebase configuration file and setting up the FirebaseOptions object.
+     * If FirebaseApp is not already initialized, this method initializes it with the given options.
+     */
     @PostConstruct
     public void initialize(){
         try{

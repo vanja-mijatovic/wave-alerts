@@ -20,4 +20,4 @@ application.properties
 # Maven
 .mvn
 # Ignore Firebase Admin SDK key
-src/main/resources/wave-alerts-firebase-adminsdk.json
+src/main/resources/firebase-config.json
